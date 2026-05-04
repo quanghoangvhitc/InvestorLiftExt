@@ -1,0 +1,28 @@
+{
+    "name": "Crawl Full Address",
+    "manifest_version": 3,
+    "version": "1.0.1",
+    "description": "",
+    "icons": {
+        "48": "Images/ic.png",
+        "128": "Images/ic.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://investorlift.com/property/*"
+            ],
+            "js": [
+                "jquery.min.js",
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
